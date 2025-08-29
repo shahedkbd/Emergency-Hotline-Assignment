@@ -1,0 +1,48 @@
+/* Responsive CSS */
+
+@media screen and (max-width: 576px) {
+    .nav-bar{
+        margin-left: 10px;
+    }
+    .nav-btn-section{
+        margin-right: 10px;
+        gap: 10px;
+    }
+    .header-paragraph-text{
+        font-size: 14px;
+        text-align: center;
+        padding: 0 10px;
+    }
+    .card-section{
+        width: 90vw;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 10px;
+        gap: 10px;
+    }
+    .call-history-responsive{
+        width: 60vw;
+        height: auto;
+        margin: 10px 10px 20px 10px;
+    }
+
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .card-section{
+        width: 90vw;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        
+    }
+    .call-history-responsive{
+        width: 40vw;
+        height: auto;
+        padding: 20px;
+
+    }
+    .header-paragraph-text{
+        font-size: 14px;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
