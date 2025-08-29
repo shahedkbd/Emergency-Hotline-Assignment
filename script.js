@@ -45,3 +45,29 @@ callBtn.forEach((call, i) => {
 clearHistory.addEventListener('click', () => {
     history.innerHTML = '';
 });
+
+
+
+// copy count + copy number section
+
+const copy_count = document.getElementById("copyCount");
+const clickCopy = document.querySelectorAll(".clickCopy");
+let copyCount = 0;
+
+for (const button of clickCopy) {
+  button.addEventListener("click", function () {
+    const card = button.closest(".card-body");
+    const numElement = card.querySelector("h2.text-2xl");
+    const number = numElement.textContent.trim();
+    navigator.clipboard
+      .writeText(number)
+      .then(() => {
+        alert(`Copied Successfully: ${number}`);
+        copyCount++;
+        copy_count.textContent = copyCount;
+      })
+      .catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
+  });
+}
